@@ -15,4 +15,5 @@ RUN cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
 		libxml2-dev \
 		libicu-dev \
 	&& docker-php-ext-install intl \
-	&& docker-php-ext-enable opcache
+	&& docker-php-ext-enable opcache \
+	&& a2enmod rewrite
