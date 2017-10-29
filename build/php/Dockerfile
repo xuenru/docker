@@ -16,4 +16,8 @@ RUN cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
 		libicu-dev \
 	&& docker-php-ext-install intl \
 	&& docker-php-ext-enable opcache \
-	&& a2enmod rewrite
+	&& a2enmod rewrite \
+	&& docker-php-source extract \
+	&& pecl install xdebug \
+	&& docker-php-ext-enable xdebug \
+	&& docker-php-source delete \
