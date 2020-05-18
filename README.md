@@ -1,5 +1,5 @@
 # docker
-PHP dev environment on docker
+Dev environment on docker
 
 Build image
 ```
